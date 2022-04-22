@@ -1,0 +1,26 @@
+{
+  "name": "bep20-dao-token",
+  "version": "1.0.0",
+  "description": "A sample of a BEP20 DAO token with transferrable ownership and appliable fees on transfering from or to certain wallets or smart contracts.",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pere970/BEP20-DAO-token.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pere970/BEP20-DAO-token/issues"
+  },
+  "homepage": "https://github.com/Pere970/BEP20-DAO-token#readme",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.5.0"
+  }
+}
