@@ -2,12 +2,11 @@
 pragma solidity ^0.8.13;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/token/ERC20/extensions/draft-ERC20Permit.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Votes.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Pausable.sol";
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
-contract BEP20DAOToken is ERC20, ERC20Permit, ERC20Votes, ERC20Pausable, Ownable {
+contract BEP20DAOToken is ERC20, ERC20Votes, ERC20Pausable, Ownable {
 
     mapping(address => uint8) public _transferToFee;
     mapping(address => uint256) public _transferFromFee;
