@@ -77,6 +77,7 @@ contract BEP20DAOToken is ERC20, ERC20Votes, ERC20Pausable, Ownable {
     ) internal override (ERC20) {
         require(sender != address(0), "BEP20: transfer from the zero address");
         require(recipient != address(0), "BEP20: transfer to the zero address");
+        require(recipient != sender, "BEP20: Transfering to yourself!");
         require(balanceOf(sender) >= amount, "BEP20: sent amount exceeds balance!");
 
         _beforeTokenTransfer(sender, recipient, amount);
