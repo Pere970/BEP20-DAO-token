@@ -79,5 +79,18 @@ contract(
             assert.equal(currentVotes, tokenSupply * 10**18);
             assert.equal(currentCheckpoints, 1);
         });
+
+        it("transfers ownership", async () => {
+            const initialOwner = await token.owner();
+            await token.transferOwnership(accounts[1]);
+            const newOwner = await token.owner();
+            assert.equal(initialOwner, accounts[0]);
+            assert.equal(newOwner, accounts[1]);
+            try {
+                await token.transferOwnership(accounts[0]);
+            } catch (error) {
+                expect(error.reason).includes('caller is not the owner');
+            }
+        });
     }
 );
